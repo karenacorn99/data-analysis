@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/styles/sn.css">
+  </head>
+  <body>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/IDSNlogo.png" width="200" height="200">
+    <h1>Hands-on Lab 3: Entering and Formatting Data</h1>
+    <p><strong>Estimated time needed:</strong> 30 minutes</p>
+    <p>In this lab, first you will learn some of the viewing options in Excel, and then learn how to enter and edit data in cells. Then, you will learn how to move, copy, paste, and fill data, and how to format cells and cell data in a worksheet.</p>
+    <h1>Software Used in this Lab</h1>
+    <p>The instruction videos in this course use the full Excel Desktop version as this has all the available product features, but for the hands-on labs we will be using the free 'Excel for the web' version as this is available to everyone.</p>
+    <p>Although you can use the Excel Desktop software if you have access to this version, <ins>it is recommended that you use Excel for the web for the hands-on labs</ins> as the lab instructions specifically refer to this version, and there are some small differences in the interface and available features.</p>
+    <h1>Dataset Used in this Lab</h1>
+    <p>The first dataset used in this lab comes from the following source: <a href="https://www.kaggle.com/sudalairajkumar/indian-startup-funding?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://www.kaggle.com/sudalairajkumar/indian-startup-funding</a> under a <strong><a href="https://creativecommons.org/publicdomain/zero/1.0?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">CC0: Public Domain license</a></strong>. Acknowledgement and thanks also goes to <a href="https://trak.in?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://trak.in</a> who were generous enough to share the data publicly for free.</p>
+    <p>We are using a modified subset of that dataset for the lab, so to follow the lab instructions successfully please use the dataset provided with the lab, rather than the dataset from the original source.</p>
+    <p>The second dataset used in this lab is an internal dataset.</p>
+    <h1>Objectives</h1>
+    <p>After completing this lab, you will be able to:</p>
+    <ul>
+      <li>Use viewing options, and enter and edit data</li>
+      <li>Copy and fill data, and format cells and data</li>
+    </ul>
+    <h1>Exercise 1: Viewing, Entering and Editing Data</h1>
+    <p>In this exercise, you will learn some of the viewing options in Excel, how to enter and edit data in cells.</p>
+    <h2>Task A: Viewing Data</h2>
+    <ol>
+      <li>
+        <p>Download the file <strong><a href="indian_startup_funding_Lab3.xlsx">indian_startup_funding_Lab3.xlsx</a></strong>. Upload and open it using Excel for the web.</p>
+      </li>
+      <li>
+        <p>Select <strong>F20:H26</strong> (if required, use the vertical and horizontal scroll bars to bring the selected cell range area to the center of the screen). Hold <strong>CTRL and +</strong> to zoom in closer to the specific area of the data. Then hold <strong>CTRL and -</strong> to zoom the worksheet back out to its original size. (<strong>Note:</strong> <strong>Zoom to Selection</strong> which is found under the <strong>View</strong> tab of Excel Desktop, is not available for Excel for the web)</p>
+      </li>
+      <li>
+        <p>On the ribbon, click <strong>View, Freeze Panes, Freeze Top Row</strong>. Now you have headings in your columns like a header row, which will remain static on screen while you move down the worksheet. Next, click <strong>Unfreeze Panes</strong>, and click <strong>Freeze First Column</strong>. The <em>Sr No</em> column will remain static on the screen while you move right across the worksheet. Lastly, click <strong>Unfreeze Panes</strong> to end this step.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/1A.3.png" width="350" height="250">
+      </li>
+    </ol><br>
+    <ol start="4">
+      <li>
+        <p>To freeze both the top row and the first column at the same time, select cell <strong>B2</strong> and click <strong>View, Freeze Panes, Freeze Panes</strong>.</p>
+        <p>
+          <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/1A.4.gif">
+        </p>
+      </li>
+    </ol><br>
+    <ol start="5">
+      <li>You can open multiple workbooks in multiple browser tabs in Excel for the web, and to switch between them, you just click each browser tab. (In Excel Desktop you have to click the <strong>View</strong> tab, then click <strong>Switch Windows</strong>)</li>
+    </ol>
+    <h2>Task B: Entering Data</h2>
+    <ol>
+      <li>
+        <p>Download the file <strong><a href="Personal_Monthly_Expenditure_Lab3.xlsx">Personal_Monthly_Expenditure_Lab3.xlsx</a></strong>. Upload and open it using Excel for the web. Go to the <strong>Expense - 2018</strong> worksheet.</p>
+      </li>
+      <li>
+        <p>In cell <strong>A1</strong>, type <strong>Month</strong> and press <strong>Tab</strong>. Then type <strong>Housing</strong> and press <strong>Tab</strong>, type <strong>Food &#x26; Dining</strong>, and press <strong>Tab</strong>, type <strong>Personal</strong>, and press <strong>Tab</strong>, type <strong>Auto &#x26; Transport</strong>, then press <strong>Tab</strong>, type <strong>Health &#x26; Fitness</strong>, then press <strong>Tab</strong>. You are now done with the header row.</p>
+      </li>
+      <li>
+        <p>To enter some data as rows in column <strong>A</strong>, in <strong>A2</strong>, type <strong>Jan</strong> and press <strong>Enter</strong>. Then type <strong>Feb</strong>, and press <strong>Enter</strong>, type <strong>Mar</strong>, and press <strong>Enter</strong>, type <strong>Apr</strong>, and press <strong>Enter</strong>.</p>
+      </li>
+      <li>
+        <p>To add another column between the <strong>Housing</strong> and <strong>Food &#x26; Dining</strong>, select column <strong>C</strong>, then right-click column <strong>C</strong>, and choose <strong>Insert Columns</strong>. In the top row header cell <strong>C1</strong>, type <strong>Bills &#x26; Utilities</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/1B.4.png" width="600" height="220">
+      </li>
+    </ol><br>
+    <ol start="5">
+      <li>
+        <p>Select columns <strong>A to G</strong>, then double-click the divider between <strong>A</strong> and <strong>B</strong> to adjust the column widths.</p>
+        <p>
+          <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/1B.5.gif">
+        </p>
+      </li>
+    </ol><br>
+    <h2>Task C: Editing Data</h2>
+    <ol>
+      <li>
+        <p>Select cell <strong>C1</strong> and press <strong>Backspace</strong> to clear the contents. Then type <strong>Bills</strong>.</p>
+      </li>
+      <li>
+        <p>Click <strong>Undo</strong> to undo the change.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/1C.2.png" width="370" height="200">
+      </li>
+    </ol><br>
+    <h1>Exercise 2: Copying, Filling, and Formatting Cells and Data</h1>
+    <p>In this exercise, you will learn how to move, copy, paste, and fill data, and how to format cells and cell data in a worksheet.</p>
+    <h2>Task A: Copying and Filling Data</h2>
+    <ol>
+      <li>
+        <p>Select <strong>A2:A5</strong>. Hover over the edge of the selected cells to get the <strong>Move</strong> pointer and then drag the selection to move the selected cells to <strong>B6</strong>. Click <strong>Undo</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/2A.1.png" width="300" height="300">
+      </li>
+    </ol><br>
+    <ol start="2">
+      <li>
+        <p>Select cell <strong>A5</strong>. Hover over the bottom right corner of cell <strong>A5</strong> to get the <strong>+ (Fill Handle)</strong> symbol, then drag to <strong>A13</strong>.</p>
+        <p>
+          <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/2A.2.gif">
+        </p>
+      </li>
+    </ol><br>
+    <ol start="3">
+      <li>
+        <p>On the <strong>Expense - 2018</strong> sheet, select <strong>A1:G13</strong> and press <strong>CTRL+C</strong>. Then on the <strong>Expense - 2019</strong> sheet, select cell <strong>A1</strong> and press <strong>CTRL+V</strong>.</p>
+      </li>
+      <li>
+        <p>Select cell <strong>A1</strong> and press <strong>CTRL+A</strong> to select the whole datasheet. On the <strong>Home</strong> tab, in the <strong>Cells</strong> group, click the drop-down arrow under <strong>Format</strong>, and click <strong>Auto-Fit Column Width</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/2A.4.png" width="1050" height="350">
+      </li>
+    </ol><br>
+    <h2>Task B: Formatting Cells and Data</h2>
+    <ol>
+      <li>
+        <p><ins>Formatting Cells:</ins></p>
+        <ul>
+          <li>
+            <p>a. Select <strong>A1:G13</strong>. On the <strong>Home</strong>, in the <strong>Tables</strong> group, click <strong>Format as Table</strong>, and choose a table style from the list. In the pop-up dialog box, ensure that the option <strong>My table has headers</strong>, is checked and then click <strong>OK</strong>.</p>
+            <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/2B.1a.png" width="850" height="350"><br>
+          </li>
+          <li>
+            <p>b. Select <strong>A2:A13</strong>. In the <strong>Font</strong> group click <strong>Italic</strong>. In the font size box, select <strong>10</strong>. In the font style drop-down box, select <strong>Arial</strong>.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><ins>Formatting Cell Data:</ins></p>
+        <ul>
+          <li>
+            <p>a. Select column <strong>B</strong>, and use <strong>SHIFT+right arrow</strong> to select across to include column <strong>G</strong>. On the <strong>Home</strong> tab, in the <strong>Number</strong> group, click the <strong>Number Format</strong> drop-down list and choose <strong>Currency</strong>.</p>
+          </li>
+          <li>
+            <p>b. Select columns <strong>B</strong> to <strong>G</strong> again. On the <strong>Home</strong> tab, in the <strong>Number</strong> group, click <strong>Decrease Decimal</strong> once.</p>
+          </li>
+          <li>
+            <p>c. Select columns <strong>B</strong> to <strong>G</strong> again. On the <strong>Home</strong> tab, in the <strong>Number</strong> group, click the <strong>Accounting Number Format ($)</strong> drop-down list, and select <strong>£ English (United Kingdom)</strong>.</p>
+            <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%203%20-%20Entering%20and%20Formatting%20Data/images/2B.2c.png" width="875" height="350">
+          </li>
+        </ul>
+      </li>
+    </ol><br>
+    <h3>Congratulations! You have completed Lab 3, and you are ready for the next topic.</h3>
+    <h3></h3>
+    <h1>Author(s)</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/sandipsahajoy?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Sandip Saha Joy</a></li>
+    </ul>
+    <h1>Other Contributor(s)</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/stevelryan?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Steve Ryan</a></li>
+    </ul>
+    <h1>Changelog</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Changed by</th>
+          <th>Change Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020-09-10</td>
+          <td>1.2</td>
+          <td>Steve Ryan</td>
+          <td>Added software/dataset info</td>
+        </tr>
+        <tr>
+          <td>2020-06-17</td>
+          <td>1.1</td>
+          <td>Steve Ryan</td>
+          <td>Tech &#x26; edit review completed</td>
+        </tr>
+        <tr>
+          <td>2020-06-11</td>
+          <td>1.0</td>
+          <td>Sandip Saha Joy</td>
+          <td>Initial version created</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2></h2>
+    <h3 align="center">© IBM Corporation 2020. All rights reserved.</h3>
+    <h3></h3>
+    <script>window.addEventListener('load', function() {
+snFaculty.inject();
+});</script>
+    <script src="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/scripts/inject.min.js"></script>
+  </body>
+</html>
