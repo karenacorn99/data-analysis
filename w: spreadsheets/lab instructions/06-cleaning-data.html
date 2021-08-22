@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/styles/sn.css">
+  </head>
+  <body>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%205%20-%20Cleaning%20Data/images/IDSNlogo.png" width="200" height="200">
+    <h1>Hands-on Lab 5: Cleaning Data</h1>
+    <p><strong>Estimated time needed:</strong> 45 minutes</p>
+    <p>In this lab, first you will learn how to deal with inaccurate data, how to remove empty rows, and how to remove duplicated data. Next, you will learn how to change the case of text, how to change date formatting, and how to trim whitespace from data. Finally, you will learn how to use the Flash Fill feature and functions in Excel to help clean data.</p>
+    <h1>Software Used in this Lab</h1>
+    <p>The instruction videos in this course use the full Excel Desktop version as this has all the available product features, but for the hands-on labs we will be using the free 'Excel for the web' version as this is available to everyone.</p>
+    <p>Although you can use the Excel Desktop software if you have access to this version, <ins>it is recommended that you use Excel for the web for the hands-on labs</ins> as the lab instructions specifically refer to this version, and there are some small differences in the interface and available features.</p>
+    <h1>Dataset Used in this Lab</h1>
+    <p>The dataset used in this lab comes from the following source: <a href="https://dataplatform.cloud.ibm.com/exchange/public/entry/view/f8ccaf607372882403a37d9019b3abf4?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://dataplatform.cloud.ibm.com/exchange/public/entry/view/f8ccaf607372882403a37d9019b3abf4</a>. This dataset is published by <strong>IBM</strong>, and includes fictitious customer demographics and sales data.</p>
+    <p>We are using a modified subset of that dataset for the lab, so to follow the lab instructions successfully please use the dataset provided with the lab, rather than the dataset from the original source.</p>
+    <h1>Objectives</h1>
+    <p>After completing this lab, you will be able to:</p>
+    <ul>
+      <li>Understand how to deal with irrelevant or inaccurate data</li>
+      <li>Remove empty rows and duplicated data</li>
+      <li>Change text case and date formatting</li>
+      <li>Trim whitespaces from data</li>
+      <li>Use Flash Fill and functions to clean data</li>
+    </ul>
+    <h1>Exercise 1: Removing Duplicated, Irrelevant or Inaccurate Data</h1>
+    <p>In this exercise, you will learn how to deal with inaccurate data, how to remove empty rows, and how to remove duplicated data.</p>
+    <h2>Task A: Check spelling</h2>
+    <ol>
+      <li>Download the file <strong><a href="Customer_demographics_and_sales_Lab5.xlsx">Customer_demographics_and_sales_Lab5.xlsx</a></strong>. Upload and open it using Excel for the web.</li>
+      <li>Select column <strong>L (CREDITCARD_TYPE)</strong>, then click <strong>Review</strong> tab, and select <strong>Spelling</strong>.</li>
+      <li>Click the correct suggestion to change the spelling.
+        <ul>
+          <li><strong>Note:</strong> Don’t change ‘jcb’ spelling when doing the spell check. We will need 'jcb' for the Exercise 1 Task D.</li>
+        </ul>
+      </li>
+      <li>Close the <strong>Spelling</strong> pane.</li>
+    </ol>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%205%20-%20Cleaning%20Data/images/1A.png" width="560" height="400"><br>
+    <h2>Task B: Remove empty rows</h2>
+    <ol>
+      <li>Press <strong>CTRL+HOME</strong>, then press <strong>CTRL+SHIFT+END</strong> to select the whole datasheet.</li>
+      <li>On the <strong>Data</strong> tab, click <strong>Filter</strong>.</li>
+      <li>Press <strong>CTRL+HOME</strong>, click the <strong>filter arrow</strong> in the <strong>CUST_NAME</strong> column, and then click <strong>Filter</strong>.</li>
+      <li>Click the <strong>Select All</strong> checkbox to deselect all of them. Then select just <strong>Blanks</strong>, then <strong>OK</strong>.</li>
+      <li>Select <strong>first row</strong>, then press <strong>CTRL+SHIFT+END</strong> to select all rows.</li>
+      <li>Right-click the selected rows and then click <strong>Delete Rows</strong>.</li>
+      <li>Finally, on the <strong>Data</strong> tab, click <strong>Clear</strong>, then click <strong>Filter</strong>.</li>
+    </ol>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%205%20-%20Cleaning%20Data/images/1B.png" width="500" height="400"><br>
+    <h2>Task C: Remove duplicate rows</h2>
+    <ol>
+      <li>Select Column <strong>T (ORDER_ID)</strong> since ORDER_ID values are unique.</li>
+      <li>On the <strong>Home</strong> tab, click <strong>Conditional Formatting> Highlight Cells Rules> Duplicate Values</strong>, and then click <strong>OK</strong>.</li>
+      <li>Select the whole datasheet <strong>(CTRL+SHIFT+END)</strong></li>
+      <li>On the <strong>Data</strong> tab, click <strong>Remove Duplicates</strong>.</li>
+      <li>In the Remove Duplicates dialog box, ensure that <strong>Select all columns</strong> is checked and that <strong>My data has headers</strong> is also checked, then click <strong>OK</strong>.</li>
+      <li>In the pop-up box informing you how many duplicate values were found and removed, click <strong>OK</strong>.</li>
+    </ol>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%205%20-%20Cleaning%20Data/images/1C.png" width="500" height="200"><br>
+    <h2>Task D: Use Find &#x26; Replace to correct misspelling</h2>
+    <ol>
+      <li>On the <strong>Home</strong> tab, click <strong>Find &#x26; Select</strong>.</li>
+      <li>Click <strong>Find</strong>. In Find what, type <strong>jcb</strong>, and click <strong>Find All</strong>.</li>
+      <li>Click <strong>Replace</strong>.</li>
+      <li>In Replace with, type <strong>JCB</strong>, click <strong>Replace All</strong>, and then click the <strong>Close</strong> icon.</li>
+      <li>On the <strong>Home</strong> tab, click <strong>Conditional Formatting> Clear Rules> Clear Rules from Entire Sheet</strong>.</li>
+    </ol>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%205%20-%20Cleaning%20Data/images/1D.png" width="400" height="520"><br>
+    <h1>Exercise 2: Dealing with Inconsistencies in Data</h1>
+    <p>In this exercise, you will learn how to change the case of text, how to change date formatting, and how to trim whitespace from data.</p>
+    <h2>Task A: Use the PROPER function to change text from upper case to proper case</h2>
+    <ol>
+      <li>Select row <strong>2</strong>, then right-click it and choose <strong>Insert Rows</strong>.</li>
+      <li>In cell <strong>A2</strong>, type <strong>=PROPER(A1)</strong> and press <strong>Enter</strong>.</li>
+      <li>Hover over the bottom-right corner of cell <strong>A2</strong>, and drag the <strong>Fill Handle</strong> across to the last column.
+        <ul>
+          <li>If dragging across is too difficult with the mouse, then select the cells in the row 2 using <strong>SHIFT+RIGHT ARROW</strong>, then press <strong>F2</strong> to put the cursor focus back in cell <strong>A2</strong>, then hold <strong>CTRL</strong> while you press <strong>Enter</strong>.</li>
+        </ul>
+      </li>
+      <li>Select row <strong>2</strong>, then press <strong>CTRL+C</strong>.</li>
+      <li>Select row <strong>1</strong>, Right-click and choose <strong>Paste Options>Values</strong>.</li>
+      <li>Select row <strong>2</strong>, right-click it and choose <strong>Delete Rows</strong>.</li>
+    </ol>
+    <h2>Task B: Use the UPPER function to change text from proper case to upper case</h2>
+    <ol>
+      <li>Select column <strong>AG (Generation)</strong>. Then right-click and choose <strong>Insert Columns</strong>. In cell <strong>AG1</strong>, type <strong>Generation</strong>.</li>
+      <li>In cell <strong>AG2</strong>, type <strong>=UPPER(AH2)</strong> and press <strong>Enter</strong>.</li>
+      <li>Hover over the bottom-right corner of cell <strong>AG2</strong> and double-click the <strong>Fill Handle</strong>.</li>
+      <li>Select column <strong>AG</strong>, then press <strong>CTRL+C</strong>.</li>
+      <li>Select column <strong>AH</strong>, right-click and choose <strong>Paste Options>Values</strong>.</li>
+      <li>Select column <strong>AG</strong>, right-click it and choose <strong>Delete Columns</strong>.</li>
+    </ol>
+    <h2>Task C: Use the LOWER function to change text from proper case to lower case</h2>
+    <ol>
+      <li>Select column <strong>AC (T_Type)</strong>. Then right-click and choose <strong>Insert Columns</strong>. In cell <strong>AC1</strong>, type <strong>T_Type</strong>.</li>
+      <li>In cell <strong>AC2</strong>, type <strong>=LOWER(AD2)</strong> and press <strong>Enter</strong>.</li>
+      <li>Hover over the bottom-right corner of cell <strong>AC2</strong> and double-click the <strong>Fill Handle</strong>.</li>
+      <li>Select column <strong>AC</strong>, then press <strong>CTRL+C</strong>.</li>
+      <li>Select column <strong>AD</strong>, right-click and choose <strong>Paste Options>Values</strong>.</li>
+      <li>Select column <strong>AC</strong>, right-click it and choose <strong>Delete Columns</strong>.</li>
+    </ol>
+    <h2>Task D: Change date formatting</h2>
+    <ol>
+      <li>Select column <strong>Z (Order_Ship_Date)</strong>.</li>
+      <li>On the <strong>Home</strong> tab, in the <strong>Number</strong> group click <strong>Number Format> More Number Formats</strong>.</li>
+      <li>In the Category list, select <strong>Date</strong>.</li>
+      <li>In the <strong>Format Cells</strong> box, under <strong>Locale</strong>, select <strong>English (United States)</strong>.</li>
+      <li>Under <strong>Type</strong>, select <strong>Wednesday, March 14, 2012</strong> and click <strong>OK</strong>.</li>
+    </ol>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%205%20-%20Cleaning%20Data/images/2D.png" width="430" height="400"><br>
+    <h2>Task E: Use Find &#x26; Replace to trim whitespace</h2>
+    <ol>
+      <li>Click <strong>CTRL+HOME</strong>.</li>
+      <li>Select all the data using <strong>CTRL+SHIFT+END</strong>.</li>
+      <li>On the <strong>Home</strong> tab, click <strong>Find &#x26; Select</strong>, then <strong>Replace</strong>.</li>
+      <li>In Find what, type <strong>2 spaces</strong>. In Replace with, type <strong>1 space</strong>.</li>
+      <li>Click <strong>Find All</strong>, then click <strong>Replace All</strong>.</li>
+      <li>Click the <strong>Close</strong> icon.</li>
+    </ol>
+    <h1>Exercise 3: More Excel Features for Cleaning Data</h1>
+    <p>In this exercise, you will learn how to use the Flash Fill feature and functions in Excel to help clean data.</p>
+    <h2>Task A: Use the Flash Fill feature to clean data:</h2>
+    <ol>
+      <li>Select column <strong>A (Cust_Name)</strong>, right-click and choose <strong>Insert Columns</strong>.</li>
+      <li>In cell <strong>A1</strong> type <strong>Customer_Name</strong> and press <strong>Enter</strong>.</li>
+      <li>In cell <strong>A2</strong>, type <strong>Mr. Allen Perl</strong> and press <strong>Enter</strong>.</li>
+      <li>Select column <strong>A (Customer_Name)</strong>, on the <strong>Data</strong> tab, click <strong>Flash Fill</strong>.</li>
+      <li>Click <strong>Undo</strong> to undo this step.</li>
+    </ol>
+    <p><ins><strong>If you are using the desktop version of Excel, you could use the 'Text to Columns' feature to perform this next task (see the corresponding topic video for instructions).</strong></ins></p>
+    <p><ins><strong>If you are using ‘Excel for the web’ (the online version of Excel), the ‘Text to Columns’ feature is not available, but you can achieve the same results using functions, as shown in the steps below.</strong></ins></p>
+    <h2>Task B: Use LEFT, RIGHT, LEN, and SEARCH functions to clean data:</h2>
+    <ol>
+      <li>Select column <strong>A (Cust_Name)</strong>, right-click and choose <strong>Insert Columns</strong>.</li>
+      <li>Select column <strong>A</strong> again, right-click and choose <strong>Insert Columns</strong>.</li>
+      <li>In cell <strong>A1</strong>, type <strong>Customer_Firstname</strong> and in cell <strong>B1</strong>, type <strong>Customer_Lastname</strong>.</li>
+      <li>Click <strong>C1</strong>, then on the <strong>Home</strong> tab, click <strong>Format Painter</strong>, then drag <strong>across to A1 and B1</strong>.</li>
+      <li>Double-click the <strong>divider between columns A and B</strong>.</li>
+      <li>In cell <strong>A2</strong> type <strong>=LEFT(C2, SEARCH(" ",C2,1))</strong> and press <strong>Enter</strong>.</li>
+      <li>In cell <strong>B2</strong> type <strong>=RIGHT(C2,LEN(C2)-SEARCH(" ",C2,1))</strong> and press <strong>Enter</strong>.</li>
+      <li>Double-click the <strong>Fill Handle</strong> on cell <strong>A2</strong>.</li>
+      <li>Double-click the <strong>Fill Handle</strong> on cell <strong>B2</strong>.</li>
+    </ol>
+    <h3>Congratulations! You have completed Lab 5, and you are ready for the next topic.</h3>
+    <h3></h3>
+    <h1>Author(s)</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/sandipsahajoy?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Sandip Saha Joy</a></li>
+    </ul>
+    <h1>Other Contributor(s)</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/stevelryan?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Steve Ryan</a></li>
+    </ul>
+    <h1>Changelog</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Changed by</th>
+          <th>Change Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020-09-10</td>
+          <td>1.2</td>
+          <td>Steve Ryan</td>
+          <td>Added software/dataset info</td>
+        </tr>
+        <tr>
+          <td>2020-07-07</td>
+          <td>1.1</td>
+          <td>Steve Ryan</td>
+          <td>ID/Tech review pass</td>
+        </tr>
+        <tr>
+          <td>2020-07-01</td>
+          <td>1.0</td>
+          <td>Sandip Saha Joy</td>
+          <td>Initial version created</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2></h2>
+    <h3 align="center">© IBM Corporation 2020. All rights reserved.</h3>
+    <h3></h3>
+    <script>window.addEventListener('load', function() {
+snFaculty.inject();
+});</script>
+    <script src="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/scripts/inject.min.js"></script>
+  </body>
+</html>

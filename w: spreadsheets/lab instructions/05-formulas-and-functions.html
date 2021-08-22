@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/styles/sn.css">
+  </head>
+  <body>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Simple%20use%20of%20functions/images/IDSNlogo.png" width="200" height="200">
+    <h1>Hands-on Lab 4: Simple Use of Functions</h1>
+    <p><strong>Estimated time needed:</strong> 30 minutes</p>
+    <p>In this lab, first you will learn the basics of formulas, how to perform simple calculations, how to select ranges in formulas, and how to copy formulas. Next, you will learn the basics of functions, how to use some of the more common functions that a Data Analyst might employ, and look at some of the more advanced functions available in Excel. Finally, you will learn about referencing data in formulas; specifically how to differentiate between relative and absolute references, and you will also learn about error handling in formulas.</p>
+    <h1>Software Used in this Lab</h1>
+    <p>The instruction videos in this course use the full Excel Desktop version as this has all the available product features, but for the hands-on labs we will be using the free 'Excel for the web' version as this is available to everyone.</p>
+    <p>Although you can use the Excel Desktop software if you have access to this version, <ins>it is recommended that you use Excel for the web for the hands-on labs</ins> as the lab instructions specifically refer to this version, and there are some small differences in the interface and available features.</p>
+    <h1>Dataset Used in this Lab</h1>
+    <p>The dataset used in this lab is an internal dataset.</p>
+    <h1>Objectives</h1>
+    <p>After completing this lab, you will be able to:</p>
+    <ul>
+      <li>Understand the basics of formulas</li>
+      <li>Perform simple calculations</li>
+      <li>Select ranges in formulas and copy formulas</li>
+      <li>Understand the basics of functions</li>
+      <li>Use common functions</li>
+      <li>Understand the more advanced functions available</li>
+      <li>Reference data in formulas</li>
+      <li>Differentiate between relative and absolute references</li>
+      <li>Understand how to handle formula errors</li>
+    </ul>
+    <h1>Exercise 1: Basics of Formulas</h1>
+    <p>In this exercise, you will learn the basics of formulas, how to perform simple calculations, how to select ranges in formulas, and how to copy formulas.</p>
+    <ol>
+      <li>
+        <p>Download the file <strong><a href="Personal_Monthly_Expenditure_Lab4.xlsx">Personal_Monthly_Expenditure_Lab4.xlsx</a></strong>. Upload and open it using Excel for the web. Go to the <strong>Expense - 2018</strong> worksheet.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Simple%20use%20of%20functions/images/1.1.png" width="875" height="350">
+      </li>
+    </ol><br>
+    <ol start="2">
+      <li>
+        <p>In <strong>A14</strong>, type <strong>Totals</strong> and in <strong>B14</strong>, type <strong>=SUM(</strong> then select cells <strong>B2 to B13</strong> with the mouse, and press <strong>Enter</strong>.</p>
+      </li>
+      <li>
+        <p>Select the <strong>fill handle</strong> on cell <strong>B14</strong> and drag to <strong>G14</strong> to copy the formula.</p>
+        <p>
+          <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Simple%20use%20of%20functions/images/1.3.gif">
+        </p>
+      </li>
+    </ol><br>
+    <ol start="3">
+      <li>
+        <p>In cell <strong>H1</strong>, type <strong>Monthly Total</strong> and double-click the divider between <strong>H and I</strong>.</p>
+      </li>
+      <li>
+        <p>In <strong>H2</strong>, type <strong>=SUM(</strong> then select cells <strong>B2 to G2</strong> with the mouse, and press <strong>Enter</strong>. If necessary, select the <strong>fill handle</strong> on cell <strong>H2</strong> and drag to <strong>H14</strong> to copy the formula.</p>
+      </li>
+      <li>
+        <p>Select columns <strong>B to H</strong>. On the <strong>Home</strong> tab, in the <strong>Number</strong> group, click the <strong>Accounting Number Format ($)</strong> drop-down list, and select <strong>$ English (United States)</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Simple%20use%20of%20functions/images/1.5.png" width="970" height="360">
+      </li>
+    </ol><br>
+    <h1>Exercise 2: Basics of Functions</h1>
+    <p>In this exercise, you will have an introduction to functions, including using some common statistical functions, and then you will learn about some more advanced functions that a Data Analyst might also use.</p>
+    <ol>
+      <li>
+        <p>In cells <strong>A16-A20</strong>, type the following:</p>
+        <ul>
+          <li><strong>Avg</strong></li>
+          <li><strong>Min</strong></li>
+          <li><strong>Max</strong></li>
+          <li><strong>Count</strong></li>
+          <li><strong>Median</strong></li>
+        </ul>
+      </li>
+      <li>
+        <p>In <strong>B16</strong>, type <strong>=AVERAGE(</strong> then select cells <strong>B2 to B13</strong> with the mouse, and press <strong>Enter</strong>. Select the <strong>fill handle</strong> on cell <strong>B16</strong> and drag to <strong>G16</strong> to copy the formula.</p>
+      </li>
+      <li>
+        <p>In <strong>B17</strong>, type <strong>=MIN(</strong> then select cells <strong>B2 to B13</strong> with the mouse, and press <strong>Enter</strong>. Select the <strong>fill handle</strong> on cell <strong>B17</strong> and drag to <strong>G17</strong> to copy the formula.</p>
+      </li>
+      <li>
+        <p>In <strong>B18</strong>, type <strong>=MAX(</strong> then select cells <strong>B2 to B13</strong> with the mouse, and press <strong>Enter</strong>. Select the <strong>fill handle</strong> on cell <strong>B18</strong> and drag to <strong>G18</strong> to copy the formula.</p>
+      </li>
+      <li>
+        <p>In <strong>B19</strong>, type <strong>=COUNT(</strong> then select cells <strong>B2 to B13</strong> with the mouse, and press <strong>Enter</strong>. Select the <strong>fill handle</strong> on cell <strong>B19</strong> and drag to <strong>G19</strong> to copy the formula. Select row <strong>19</strong>. On the <strong>Home</strong> tab, click the <strong>Number Format</strong> drop-down list, and select <strong>Number</strong>.</p>
+      </li>
+      <li>
+        <p>In <strong>B20</strong>, type <strong>=MEDIAN(</strong> then select cells <strong>B2 to B13</strong> with the mouse, and press <strong>Enter</strong>. Select the <strong>fill handle</strong> on cell <strong>B20</strong> and drag to <strong>G20</strong> to copy the formula.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Simple%20use%20of%20functions/images/2.6.png" width="950" height="150">
+      </li>
+    </ol><br>
+    <ol start="7">
+      <li>Explore some more commonly used functions of a data analyst by clicking the arrow under <strong>AutoSum</strong>, then select <strong>More Functions</strong> and look at some of the functions in various categories to see what actions they perform:
+        <ul>
+          <li><ins>Financial :</ins> <strong>ACCRINT, INTRATE</strong></li>
+          <li><ins>Logical :</ins> <strong>AND, IF, OR, NOT</strong></li>
+          <li><ins>Text :</ins> <strong>CONCAT, FIND, SEARCH</strong></li>
+          <li><ins>Date &#x26; Time :</ins> <strong>NETWORKDAYS, WEEKDAY</strong></li>
+          <li><ins>Lookup &#x26; Reference :</ins> <strong>AREAS, SORTBY, VLOOKUP, HLOOKUP</strong></li>
+          <li><ins>Math &#x26; Trig :</ins> <strong>POWER, SUMIF, SUMPRODUCT</strong></li>
+          <li><ins>Statistical :</ins> <strong>AVERAGE, COUNTIF, MAX, MEDIAN, MIN</strong></li>
+        </ul>
+      </li>
+    </ol>
+    <h1>Exercise 3: Referencing Data in Formulas (relative vs absolute) &#x26; Formula Errors</h1>
+    <p>In this exercise, you will learn how to reference data in formulas; specifically differentiating between relative and absolute references, and you will also learn about error handling in formulas.</p>
+    <ol>
+      <li>
+        <p>In cells <strong>A31-A40</strong>, type <strong>1-10</strong>. Select row <strong>31 to 40</strong>. On the <strong>Home</strong> tab, click the <strong>Number Format</strong> drop-down list, and select <strong>General</strong>.</p>
+      </li>
+      <li>
+        <p><ins>Relative References :</ins> In cell <strong>B33</strong>, type <strong>=A31+A32</strong> and press <strong>Enter</strong>. Select the <strong>fill handle</strong> on cell <strong>B33</strong> and drag to <strong>B40</strong> to copy the formula. Here, both first and second cell reference will move 1 cell down. For example, on cell <strong>B34</strong> formula will be changed to <strong>=A32+A33</strong>, on cell <strong>B35</strong> formula will be changed to <strong>=A33+A34</strong> and so on.</p>
+      </li>
+      <li>
+        <p><ins>Absolute References :</ins> In cell <strong>C33</strong>, type <strong>=$A$31+$A$32</strong> and press <strong>Enter</strong>. Select the <strong>fill handle</strong> on cell <strong>C33</strong> and drag to <strong>C40</strong> to copy the formula. Here, both first and second cell references will not change. For example, on cell <strong>C34</strong> formula will remain <strong>=$A$31+$A$32</strong>, on cell <strong>C35</strong> formula will remain <strong>=$A$31+$A$32</strong> and so on.</p>
+      </li>
+      <li>
+        <p><ins>Mixed References :</ins> In cell <strong>D33</strong>, type <strong>=$A$31+$A32</strong> and press <strong>Enter</strong>. Select the <strong>fill handle</strong> on cell <strong>D33</strong> and drag to <strong>D40</strong> to copy the formula. Here, first cell reference will stay the same, but the second reference will change. For example, on cell <strong>D34</strong> formula will be changed to <strong>=$A$31+$A33</strong>, on cell <strong>D35</strong> formula will be changed to <strong>=$A$31+$A34</strong> and so on.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Simple%20use%20of%20functions/images/3.4.png" width="500" height="280">
+      </li>
+    </ol><br>
+    <ol start="5">
+      <li>
+        <p>In cell <strong>B31</strong>, type <strong>=A16+A17</strong>. Now this will lead to a formula error <strong>#VALUE!</strong> since cells <strong>A16</strong> and <strong>A17</strong> do not contain any number.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Simple%20use%20of%20functions/images/3.5.png" width="550" height="280">
+      </li>
+    </ol><br>
+    <ol start="6">
+      <li>
+        <p>Click the <strong>question mark icon</strong> in the error message box. This will open the <strong>Help</strong> for this topic. Read through this help file for more information about <strong>#VALUE!</strong> errors in formulas.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Simple%20use%20of%20functions/images/3.6.png" width="780" height="600">
+      </li>
+    </ol><br>
+    <h3>Congratulations! You have completed Lab 4, and you are ready for the next topic.</h3>
+    <h3></h3>
+    <h1>Author(s)</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/sandipsahajoy?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Sandip Saha Joy</a></li>
+    </ul>
+    <h1>Other Contributor(s)</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/stevelryan?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Steve Ryan</a></li>
+    </ul>
+    <h1>Changelog</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Changed by</th>
+          <th>Change Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020-09-10</td>
+          <td>1.2</td>
+          <td>Steve Ryan</td>
+          <td>Added software/dataset info</td>
+        </tr>
+        <tr>
+          <td>2020-06-25</td>
+          <td>1.1</td>
+          <td>Steve Ryan</td>
+          <td>Reviewed version</td>
+        </tr>
+        <tr>
+          <td>2020-06-16</td>
+          <td>1.0</td>
+          <td>Sandip Saha Joy</td>
+          <td>Initial version created</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2></h2>
+    <h3 align="center">© IBM Corporation 2020. All rights reserved.</h3>
+    <h3></h3>
+    <script>window.addEventListener('load', function() {
+snFaculty.inject();
+});</script>
+    <script src="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/scripts/inject.min.js"></script>
+  </body>
+</html>
