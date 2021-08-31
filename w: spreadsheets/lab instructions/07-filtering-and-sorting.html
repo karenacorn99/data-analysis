@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/styles/sn.css">
+  </head>
+  <body>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%206%20-%20Filtering%20and%20Sorting%20Data%20using%20Functions%20for%20Data%20Analysis/images/IDSNlogo.png" width="200" height="200">
+    <h1>Hands-on Lab 6: Filtering and Sorting Data using Functions for Data Analysis</h1>
+    <p><strong>Estimated time needed:</strong> 30 minutes</p>
+    <p>In this lab, first you will learn how to use the Filter and Sort tools in Excel to filter and sort our data to enable us to control what information is displayed, and how it is displayed in our worksheets. Next, you will learn how to use some of the most common functions a Data Analyst might use; namely IF, IFS, COUNTIF, and SUMIF. Finally, you will learn how to use the VLOOKUP and HLOOKUP functions in Excel to reference data contained in both vertical and horizontal lookup tables.</p>
+    <h1>Software Used in this Lab</h1>
+    <p>The instruction videos in this course use the full Excel Desktop version as this has all the available product features, but for the hands-on labs we will be using the free 'Excel for the web' version as this is available to everyone.</p>
+    <p>Although you can use the Excel Desktop software if you have access to this version, <ins>it is recommended that you use Excel for the web for the hands-on labs</ins> as the lab instructions specifically refer to this version, and there are some small differences in the interface and available features.</p>
+    <h1>Datasets Used in this Lab</h1>
+    <p>The first dataset used in this lab comes from the following source: <a href="https://dataplatform.cloud.ibm.com/exchange/public/entry/view/f8ccaf607372882403a37d9019b3abf4?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://dataplatform.cloud.ibm.com/exchange/public/entry/view/f8ccaf607372882403a37d9019b3abf4</a>. This dataset is published by <strong>IBM</strong>, and includes fictitious customer demographics and sales data.</p>
+    <p>
+      The second dataset used in this lab comes from the following source: <a href="https://www.kaggle.com/sudalairajkumar/indian-startup-funding?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://www.kaggle.com/sudalairajkumar/indian-startup-funding</a> under a <strong><a href="https://creativecommons.org/publicdomain/zero/1.0?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">CC0: Public Domain license</a></strong>.
+      Acknowledgement and thanks also goes to <a href="https://trak.in?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://trak.in</a> who were generous enough to share the data publicly for free.
+    </p>
+    <p>We are using modified subsets of these datasets for the lab, so to follow the lab instructions successfully please use the datasets provided with the lab, rather than the datasets from their original sources.</p>
+    <p>The third dataset used in this lab is an internal dataset.</p>
+    <h1>Objectives</h1>
+    <p>After completing this lab, you will be able to:</p>
+    <ul>
+      <li>Use the Filter and Sort tools</li>
+      <li>Use IF, IFS, COUNTIF, and SUMIF functions for data analysis</li>
+      <li>Use the VLOOKUP and HLOOKUP reference functions</li>
+    </ul>
+    <h1>Exercise 1: Filtering and Sorting Data</h1>
+    <p>In this exercise, you will learn how to use the Filter and Sort tools in Excel to filter and sort our data to enable us to control what information is displayed, and how it is displayed in our worksheets.</p>
+    <h2>Task A: Filtering data</h2>
+    <p><ins>To use Auto Filters to filter data:</ins></p>
+    <ol>
+      <li>
+        <p>Download the file <strong><a href="Customer_demographics_and_sales_Lab6.xlsx">Customer_demographics_and_sales_Lab6.xlsx</a></strong>. Upload and open it using Excel for the web.</p>
+      </li>
+      <li>
+        <p>Select <strong>any cell</strong> in the data, and click the <strong>Data</strong> tab, then click <strong>Filter</strong>.</p>
+      </li>
+      <li>
+        <p>Click the <strong>filter drop-down</strong> in column <strong>AG (Purchase_Status)</strong>, and select <strong>Filter...</strong>.</p>
+      </li>
+      <li>
+        <p>In the list, only select <strong>Frequent</strong> and click <strong>OK</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%206%20-%20Filtering%20and%20Sorting%20Data%20using%20Functions%20for%20Data%20Analysis/images/1.A.4.png" width="300" height="380">
+      </li>
+    </ol><br>
+    <ol start="5">
+      <li>
+        <p>Click the <strong>filter drop-down</strong> in the column <strong>AG</strong>, and click <strong>Clear Filter From “Purchase_Status”</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%206%20-%20Filtering%20and%20Sorting%20Data%20using%20Functions%20for%20Data%20Analysis/images/1.A.5.png" width="380" height="250">
+      </li>
+    </ol><br>
+    <ol start="6">
+      <li>
+        <p>Click the <strong>filter drop-down</strong> in column <strong>AE (T_Type)</strong>, and select <strong>Filter...</strong>.</p>
+      </li>
+      <li>
+        <p>In the list, only select <strong>Cancelled</strong> and click <strong>OK</strong>.</p>
+      </li>
+      <li>
+        <p>Click the <strong>filter drop-down</strong> in column <strong>AF (Purchase_Touchpoint)</strong>, and select <strong>Filter...</strong>.</p>
+      </li>
+      <li>
+        <p>In the list, only select <strong>Desktop</strong> and click <strong>OK</strong>.</p>
+      </li>
+      <li>
+        <p>On the <strong>Data</strong> tab, click <strong>Clear</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%206%20-%20Filtering%20and%20Sorting%20Data%20using%20Functions%20for%20Data%20Analysis/images/1.A.10.png" width="395" height="150">
+      </li>
+    </ol><br>
+    <p><ins>To use Custom Filters to filter data:</ins></p>
+    <ol>
+      <li>Click the <strong>filter drop-down</strong> in column <strong>AD (Order_Value)</strong>, then <strong>Number Filters>Top 10...</strong>.</li>
+      <li>Change the value from <strong>10 to 50</strong> and Click <strong>OK</strong>.</li>
+      <li>Click the <strong>filter drop-down</strong> in the column <strong>AD</strong>, and click <strong>Clear Filter From “Order_Value”</strong>.</li>
+    </ol>
+    <h2>Task B: Sorting data</h2>
+    <ol>
+      <li>
+        <p>On the <strong>Data</strong> tab, click Custom Sort to open a dialog box like below.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%206%20-%20Filtering%20and%20Sorting%20Data%20using%20Functions%20for%20Data%20Analysis/images/2.B.1.png" width="740" height="200">
+      </li>
+    </ol><br>
+    <ol start="2">
+      <li>Click the <strong>Column drop-down</strong> of row <strong>Sort By</strong>, select <strong>Order_Ship_Date</strong>.</li>
+      <li>Click the <strong>Order drop-down</strong> of row <strong>Sort By</strong>, select <strong>Sort Ascending</strong>.</li>
+      <li>Click <strong>Add</strong>.</li>
+      <li>Click the <strong>Column drop-down</strong> of row <strong>Then By</strong>, select <strong>Order_Value</strong>.</li>
+      <li>Click the <strong>Order drop-down</strong> of row <strong>Then By</strong>, select <strong>Sort Descending</strong>.</li>
+      <li>Click <strong>OK</strong>.</li>
+    </ol>
+    <h1>Exercise 2: Useful Functions for Data Analysis</h1>
+    <p>In this exercise, you will learn how to use some of the most common functions a Data Analyst might use; namely IF, IFS, COUNTIF, and SUMIF.</p>
+    <h2>Task A: Use of IF to apply one condition</h2>
+    <ol>
+      <li>Select column <strong>AF</strong>, right-click, <strong>Insert</strong>.</li>
+      <li>In cell <strong>AF1</strong>, type <strong>Complete?</strong>.</li>
+      <li>In cell <strong>AF2</strong>, type <strong>=IF(AE2="Complete","Yes","No")</strong> and press Enter.</li>
+      <li>Double-click the <strong>Fill Handle of AF2</strong> to copy down the column.</li>
+    </ol>
+    <h2>Task B: Use of Nested IF to apply multiple conditions</h2>
+    <ol>
+      <li>Select column <strong>AE</strong>, right-click, <strong>Insert</strong>.</li>
+      <li>In cell <strong>AE1</strong>, type <strong>Order Size (IF)</strong>.</li>
+      <li>In cell <strong>AE2</strong>, type <strong>=IF(AD2>300,"Large",IF(AD2>100,"Medium",IF(AD2>0,"Small")))</strong> and press <strong>Enter</strong>.</li>
+      <li>Double-click the <strong>Fill Handle of AE2</strong> to copy down the column.</li>
+    </ol>
+    <h2>Task C: Use of IFS to apply multiple conditions (alternative of Nested IF)</h2>
+    <ol>
+      <li>Select column <strong>AE</strong>, right-click, <strong>Insert</strong>.</li>
+      <li>In cell <strong>AE1</strong>, type <strong>Order Size (IFS)</strong>.</li>
+      <li>In cell <strong>AE2</strong>, type <strong>=IFS(AD2>300,"Large",AD2>100,"Medium",AD2>0,"Small")</strong> and press <strong>Enter</strong>.</li>
+      <li>Double-click the <strong>Fill Handle of AE2</strong> to copy down the column.</li>
+    </ol>
+    <h2>Task D: Use of COUNTIF to count the number of cells that meet a specified criterion</h2>
+    <ol>
+      <li>Select cell <strong>BX2</strong> and type <strong>count VISA card</strong>.</li>
+      <li>Select cell <strong>BY2</strong> and type <strong>=COUNTIF(N2:N195,"VISA")</strong> and press <strong>Enter</strong>.</li>
+    </ol>
+    <h2>Task E: Use of SUMIF function to sum the values within a specified range that meet a specified criterion</h2>
+    <ol>
+      <li>Select cell <strong>BX3</strong> and type <strong>sum Large order</strong>.</li>
+      <li>Select cell <strong>BY3</strong> and type <strong>=SUMIF(AE2:AE195,"Large", AD2:AD195)</strong> and press <strong>Enter</strong>.
+        <ul>
+          <li>Formula: <strong>=SUMIF(range, criteria, [sum range])</strong>.</li>
+        </ul>
+      </li>
+    </ol>
+    <h2>Task F: Use of SUMIFS function to sum the values within a specified range that meet multiple specified criteria</h2>
+    <ol>
+      <li>Select cell <strong>BX4</strong> and type <strong>sum Large order with Baby Gen</strong>.</li>
+      <li>Select cell <strong>BY4</strong> and type <strong>=SUMIFS(AD2:AD195, AE2:AE195,"Large", AL2:AL195,"<em>BABY_BOOMERS</em>")</strong> and press <strong>Enter</strong>.
+        <ul>
+          <li>Formula: <strong>=SUMIFS ([sum range], range1, criteria1, range2, criteria2, ...)</strong>.</li>
+        </ul>
+      </li>
+    </ol>
+    <h1>Exercise 3: Using the VLOOKUP and HLOOKUP Functions</h1>
+    <p>In this exercise, you will learn how to use the VLOOKUP and HLOOKUP functions in Excel to reference data contained in both vertical and horizontal lookup tables.</p>
+    <h2>Task A: Use of VLOOKUP to look up data in a table organized vertically</h2>
+    <ol>
+      <li>Download the file <strong><a href="indian_startup_funding_Lab6.xlsx">indian_startup_funding_Lab6.xlsx</a></strong>. Upload and open it using Excel for the web.</li>
+      <li>In cell <strong>K2,L2,M2,</strong> type <strong>VLOOKUP, Startup Name, Amount in USD</strong> respectively.</li>
+      <li>Select and copy cells from <strong>C9 to C15</strong> and paste in cell <strong>L3</strong>.</li>
+      <li>In cell <strong>M3</strong>, type <strong>=VLOOKUP(L3, C2:I113, 7, FALSE)</strong> and press <strong>Enter</strong>.
+        <ul>
+          <li>Formula: <strong>=VLOOKUP (value, table, col_index, [range_lookup])</strong>.</li>
+        </ul>
+      </li>
+      <li>Hover over the bottom-right corner of cell <strong>M3</strong>, and drag the Fill Handle down to the cell <strong>M9</strong>.</li>
+      <li>Select cells from <strong>M3 to M9</strong> and <strong>select Number Format>Currency</strong>.</li>
+    </ol>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%206%20-%20Filtering%20and%20Sorting%20Data%20using%20Functions%20for%20Data%20Analysis/images/3.A.png" width="440" height="250"><br>
+    <h2>Task B: Use of HLOOKUP to look up data in a table organized horizontally</h2>
+    <ol>
+      <li>Download the file <strong><a href="Personal_Monthly_Expenditure_Lab6.xlsx">Personal_Monthly_Expenditure_Lab6.xlsx</a></strong>. Upload and open it using Excel for the web.</li>
+      <li>In cell <strong>J2,K2,L2,M2,</strong> type <strong>HLOOKUP, Month, Food &#x26; Dining, Health &#x26; Fitness</strong> respectively.</li>
+      <li>Select and copy cells from <strong>A10 to A12</strong> and paste in cell <strong>K3</strong>.</li>
+      <li>In cell <strong>L3</strong>, type <strong>=HLOOKUP(D1, A1:H14, 10, FALSE)</strong> and press <strong>Enter</strong>.
+        <ul>
+          <li>Formula: <strong>=HLOOKUP (value, table, row_index, [range_lookup])</strong>.</li>
+        </ul>
+      </li>
+      <li>Hover over the bottom-right corner of cell <strong>L3</strong>, and drag the Fill Handle down to the cell <strong>L5</strong>.</li>
+      <li>Select cells from <strong>L3 to L5</strong> and <strong>select Number Format>Currency</strong>.</li>
+      <li>In cell <strong>M3</strong>, type <strong>=HLOOKUP(G1, A1:H14, 10, FALSE)</strong> and press <strong>Enter</strong>.</li>
+      <li>Hover over the bottom-right corner of cell <strong>M3</strong>, and drag the Fill Handle down to the cell <strong>M5</strong>.</li>
+      <li>Select cells from <strong>M3 to M5</strong> and <strong>select Number Format>Currency</strong>.</li>
+    </ol>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%206%20-%20Filtering%20and%20Sorting%20Data%20using%20Functions%20for%20Data%20Analysis/images/3.B.png" width="535" height="250"><br>
+    <h3>Congratulations! You have completed Lab 6, and you are ready for the next topic.</h3>
+    <h3></h3>
+    <h1>Author(s)</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/sandipsahajoy?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Sandip Saha Joy</a></li>
+    </ul>
+    <h1>Other Contributor(s)</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/stevelryan?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Steve Ryan</a></li>
+    </ul>
+    <h1>Changelog</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Changed by</th>
+          <th>Change Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020-09-10</td>
+          <td>1.2</td>
+          <td>Steve Ryan</td>
+          <td>Added software/dataset info</td>
+        </tr>
+        <tr>
+          <td>2020-07-13</td>
+          <td>1.1</td>
+          <td>Steve Ryan</td>
+          <td>ID review</td>
+        </tr>
+        <tr>
+          <td>2020-07-07</td>
+          <td>1.0</td>
+          <td>Sandip Saha Joy</td>
+          <td>Initial version created</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2></h2>
+    <h3 align="center">© IBM Corporation 2020. All rights reserved.</h3>
+    <h3></h3>
+    <script>window.addEventListener('load', function() {
+snFaculty.inject();
+});</script>
+    <script src="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/scripts/inject.min.js"></script>
+  </body>
+</html>

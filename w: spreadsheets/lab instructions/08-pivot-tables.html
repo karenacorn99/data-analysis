@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/styles/sn.css">
+  </head>
+  <body>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%207%20-%20Using%20Pivot%20Tables/images/IDSNlogo.png" width="200" height="200">
+    <h1>Hands-on Lab 7: Using Pivot Tables</h1>
+    <p><strong>Estimated time needed:</strong> 30 minutes</p>
+    <p>In this lab, first you will learn how to format data as a table, how to create a Pivot Table and use fields to arrange data in a Pivot Table, and how to perform calculations using Pivot Table data. Next, you will learn some other features that we can use with Pivot Tables, including Recommended Charts, Filters, Slicers, and Timelines.</p>
+    <h1>Software Used in this Lab</h1>
+    <p>The instruction videos in this course use the full Excel Desktop version as this has all the available product features, but for the hands-on labs we will be using the free 'Excel for the web' version as this is available to everyone.</p>
+    <p>Although you can use the Excel Desktop software if you have access to this version, <ins>it is recommended that you use Excel for the web for the hands-on labs</ins> as the lab instructions specifically refer to this version, and there are some small differences in the interface and available features.</p>
+    <h1>Dataset Used in this Lab</h1>
+    <p>
+      The dataset used in this lab comes from the following source: <a href="https://www.kaggle.com/sudalairajkumar/indian-startup-funding?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://www.kaggle.com/sudalairajkumar/indian-startup-funding</a> under a <strong><a href="https://creativecommons.org/publicdomain/zero/1.0?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">CC0: Public Domain license</a></strong>.
+      Acknowledgement and thanks also goes to <a href="https://trak.in?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://trak.in</a> who were generous enough to share the data publicly for free.
+    </p>
+    <p>We are using a modified subset of that dataset for the lab, so to follow the lab instructions successfully please use the dataset provided with the lab, rather than the dataset from the original source.</p>
+    <h1>Objectives</h1>
+    <p>After completing this lab, you will be able to:</p>
+    <ul>
+      <li>Format data as a table</li>
+      <li>Create a Pivot Table and use fields to arrange data in a Pivot Table</li>
+      <li>Perform calculations using Pivot Table data</li>
+      <li>Use the Recommended Charts feature (does not work with the 'Basic' Office for the web plan.)</li>
+      <li>Use the Filters feature</li>
+      <li>Use the Slicers feature</li>
+      <li>Use the Timelines feature</li>
+    </ul>
+    <h1>Exercise 1: Introduction to Creating Pivot Tables in Excel</h1>
+    <p>In this exercise, you will learn how to format data as a table, how to create a Pivot Table and use fields to arrange data in a Pivot Table, and how to perform calculations using Pivot Table data.</p>
+    <h2>Task A: Format data as a table</h2>
+    <ol>
+      <li>
+        <p>Download the file <strong><a href="indian_startup_funding_Lab7.xlsx">indian_startup_funding_Lab7.xlsx</a></strong>. Upload and open it using Excel for the web.</p>
+      </li>
+      <li>
+        <p>Select cell <strong>A2</strong>.</p>
+      </li>
+      <li>
+        <p>On the <strong>Home</strong> tab, in the <strong>Tables</strong> group, click <strong>Format as Table</strong>.</p>
+      </li>
+      <li>
+        <p>Select <strong>Light Gray, Table Style Medium 15</strong>.</p>
+      </li>
+      <li>
+        <p>Select <strong>My table has headers</strong>. Click <strong>OK</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%207%20-%20Using%20Pivot%20Tables/images/1.A.5.png" width="435" height="200">
+      </li>
+    </ol><br>
+    <h2>Task B: Create a pivot table and use fields to arrange data in a pivot table</h2>
+    <ol>
+      <li>
+        <p>Select cell <strong>D4</strong></p>
+      </li>
+      <li>
+        <p>On the <strong>Insert</strong> tab, click <strong>PivotTable</strong>.</p>
+      </li>
+      <li>
+        <p>Click <strong>OK</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%207%20-%20Using%20Pivot%20Tables/images/1.B.3.png" width="340" height="300">
+      </li>
+    </ol><br>
+    <ol start="4">
+      <li>Double-click <strong>Sheet1</strong>, type <strong>Pivot1</strong> and click <strong>OK</strong>.</li>
+      <li>In the fields list, drag <strong>Industry Vertical</strong> to <strong>Rows</strong>.</li>
+      <li>In the fields list, drag <strong>City Location</strong> to <strong>Rows</strong> below <strong>Industry Vertical</strong>.</li>
+      <li>In the fields list, drag <strong>Startup Name</strong> to <strong>Rows</strong> below <strong>City Location</strong>.</li>
+      <li>In the fields list, drag <strong>Amount in USD</strong> to <strong>Values</strong>.</li>
+      <li>In the ribbon, select the <strong>PivotTable</strong> tab, click <strong>Settings</strong>, then in the <strong>PivotTable Settings</strong> pane, under <strong>Layout</strong>, select <strong>Single column</strong>.</li>
+    </ol>
+    <h2>Task C: Perform a simple calculation in a pivot table</h2>
+    <ol>
+      <li>
+        <p>In the <strong>PivotTable Fields</strong> pane, in the <strong>Values</strong> section, click the drop-down arrow next to <strong>Count of Amount in USD</strong>, and click <strong>Value Field Settings</strong>.</p>
+      </li>
+      <li>
+        <p>Select <strong>Summarize value field by > Sum</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%207%20-%20Using%20Pivot%20Tables/images/1.C.2.png" width="340" height="300">
+      </li>
+    </ol><br>
+    <ol start="3">
+      <li>Click <strong>OK</strong>.</li>
+      <li>Select the column called <strong>Sum of Amount in USD</strong> and then on the <strong>Home</strong> tab, select <strong>Accounting Number Format > $ English (United States)</strong>.</li>
+    </ol>
+    <h1>Exercise 2: Pivot Table Features</h1>
+    <p>In this exercise, you will learn some other features that we can use with Pivot Tables, including Recommended Charts, Filters, Slicers, and Timelines.</p>
+    <p><strong>Note: The 'Recommended Charts' feature only works with 'full' Office for the web plans (those plans that come with an Office 365 subscription). Recommended Charts do not work with the 'basic' plan that comes with a Microsoft Account.</strong></p>
+    <h2>Task A: Use of the Recommended Charts feature (Optional: If you have a full Office for the web plan)</h2>
+    <ol>
+      <li>
+        <p>Switch to worksheet <strong>indian-startup-funding</strong>.</p>
+      </li>
+      <li>
+        <p>Select column <strong>F (City Location)</strong>.</p>
+      </li>
+      <li>
+        <p>On the <strong>Insert</strong> tab, select <strong>Recommended Charts</strong>.</p>
+      </li>
+      <li>
+        <p>Click <strong>+ Insert PivotChart</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%207%20-%20Using%20Pivot%20Tables/images/2.A.4.png" width="600" height="250">
+      </li>
+    </ol><br>
+    <ol start="5">
+      <li>
+        <p>Switch to worksheet <strong>indian-startup-funding</strong> again.</p>
+      </li>
+      <li>
+        <p>Select column <strong>C, D, E</strong>.</p>
+      </li>
+      <li>
+        <p>On the <strong>Insert</strong> tab, select <strong>Recommended Charts</strong>.</p>
+      </li>
+      <li>
+        <p>Choose the second recommended chart, and click <strong>+ Insert PivotChart</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%207%20-%20Using%20Pivot%20Tables/images/2.A.8.png" width="708" height="250">
+      </li>
+    </ol><br>
+    <h2>Task B: Use of the Filters feature</h2>
+    <ol>
+      <li>Switch to worksheet <strong>Pivot1</strong>.</li>
+      <li>In the Pivot Table, click the <strong>Row Labels</strong> arrow.</li>
+      <li>Select <strong>City Location</strong>, then <strong>Filter...</strong>.</li>
+      <li>Just select <strong>Burnsville</strong>, <strong>Delhi</strong>, <strong>New York</strong>, then click <strong>OK</strong> to display the amounts for startups in these three cities only.</li>
+      <li>In the Pivot Table, click the <strong>Row Labels</strong> arrow.</li>
+      <li>Select <strong>City Location</strong>, then click <strong>Clear Filter From 'City Location'</strong> to display the startups in all cities again.</li>
+    </ol>
+    <h2>Task C: Use of the Slicers feature</h2>
+    <ol>
+      <li>Download the file <strong><a href="indian_startup_funding_Lab7_with_slicers_timelines.xlsx">indian_startup_funding_Lab7_with_slicers_timelines.xlsx</a></strong>. Upload and open it using Excel for the web.</li>
+      <li>Switch to worksheet <strong>Pivot1</strong> if you are not there.</li>
+      <li>In the <strong>City Location</strong> slicer, select <strong>Burnsville</strong>, then <strong>Delhi</strong>, then <strong>New York</strong>.</li>
+      <li>To filter by multiple selection in the <strong>City Location</strong> slicer, with <strong>New York</strong> still selected, press <strong>CTRL</strong> and select <strong>Burnsville</strong>, and then <strong>Delhi</strong>.</li>
+      <li>To filter using more than one slicer, in the <strong>Investors Name</strong> slicer, select <strong>Amour Infrastructure</strong>, then press <strong>CTRL</strong> and select <strong>Westbridge Capital</strong>, and then <strong>Breakthrough Energy Ventures</strong>.</li>
+      <li>In the <strong>City Location</strong> slicer, click the <strong>Clear Filter</strong> button, then in the <strong>Investors Name</strong> slicer, click the <strong>Clear Filter</strong> button.</li>
+    </ol>
+    <h2>Task D: Use of the Timelines feature</h2>
+    <ol>
+      <li>
+        <p>In the Date timeline, click <strong>top right drop-down</strong> and select <strong>DAYS</strong>, then scroll <strong>left and right</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork/Hands-on%20Labs/Lab%207%20-%20Using%20Pivot%20Tables/images/2.D.1.png" width="650" height="250">
+      </li>
+    </ol><br>
+    <ol start="2">
+      <li>In the Date timeline, click <strong>top right drop-down</strong> and select <strong>QUARTERS</strong>.</li>
+      <li>In the Date Timeline, select <strong>2019 Q1</strong>, then drag <strong>2019 Q1 to 2019 Q3</strong>.</li>
+      <li>In the Date timeline, click the <strong>Clear Filter</strong> icon.</li>
+      <li>In the Date timeline, click <strong>top right drop-down</strong> and select <strong>YEARS</strong>, then select <strong>2020</strong> only.</li>
+    </ol>
+    <h3>Congratulations! You have completed Lab 7, and you are ready for the next topic.</h3>
+    <h3></h3>
+    <h1>Author(s)</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/sandipsahajoy?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Sandip Saha Joy</a></li>
+    </ul>
+    <h1>Other Contributor(s)</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/stevelryan?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBMDeveloperSkillsNetwork-DA0130EN-SkillsNetwork-20531059&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Steve Ryan</a></li>
+    </ul>
+    <h1>Changelog</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Changed by</th>
+          <th>Change Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020-09-10</td>
+          <td>1.2</td>
+          <td>Steve Ryan</td>
+          <td>Added software/dataset info</td>
+        </tr>
+        <tr>
+          <td>2020-07-23</td>
+          <td>1.1</td>
+          <td>Steve Ryan</td>
+          <td>ID review</td>
+        </tr>
+        <tr>
+          <td>2020-07-20</td>
+          <td>1.0</td>
+          <td>Sandip Saha Joy</td>
+          <td>Initial version created</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2></h2>
+    <h3 align="center">© IBM Corporation 2020. All rights reserved.</h3>
+    <h3></h3>
+    <script>window.addEventListener('load', function() {
+snFaculty.inject();
+});</script>
+    <script src="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/scripts/inject.min.js"></script>
+  </body>
+</html>
